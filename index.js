@@ -18,12 +18,12 @@ Do the following:
    HINT: no function required
 */
 
-const votingAge = 18
+const votingAge = 18;
 
 if(votingAge <= 18){
-  console.log(true)
+  console.log(true);
 }
-
+else{console.log(false)};
 
 
 /*
@@ -62,14 +62,13 @@ Do the following:
    HINT: look up the Number method
 */
 
-let year = `1999`;
+// let year = `1999`;
 
-coercedNum = function(stringNum){
-  stringNum = Number(stringNum);
-  return stringNum
-};
+//   year = Number(stringNum);
+//   return stringNum
+// };
 
-console.log(coercedNum(year));
+// console.log(coercedNum(year));
 
 
 /*
@@ -81,7 +80,7 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-multiply(5, 3);
+// multiply(5, 3);
 
 function multiply(a, b){
     return a * b;
@@ -100,7 +99,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-dogYears(3);
+// dogYears(3);
 
 function dogYears(age){
     return age * 7;
@@ -135,9 +134,39 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if(age > 1 && weight <= 5){
+    return weight * .05;}
+
+  else if(age > 1 && weight > 5 && weight <= 10){
+    return weight * .04;
   }
+
+  else if(age >= 1 && weight > 10 && weight <= 15){
+    return weight * .03;
+  }
+
+else if(age < 1 && weight > 15){
+    return weight * .02;
+}
+
+else if(age < 1 && age > (7/12) ){
+    return weight * .04;
+}
+
+else if(age <= (7/12) && age > (4/12) ){
+    return weight * .05;
+}
+
+else if(age <= 4/12 && age > (2/12) ){
+    return weight * .1;
+}
+else {return console.log(`You're puppy's too young for feed calculations.`)}
+};
+      
+
+hungryDog(15, 1);
+
 
 
 
