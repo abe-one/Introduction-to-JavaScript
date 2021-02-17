@@ -328,9 +328,25 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+function vowelCounter(countedString) {
+
+  countedString.toLowerCase();
+
+  let vowels = 0;
+  
+  if(
+      countedString.includes(`a` || `e` || `i` || `o` || `u`)
+  ) {
+  for (let i = 0; i < countedString.length; i++){
+    if(countedString[i] === `a` || `e` || `i` || `o` || `u`){
+      vowels = vowels + 1;
+    };
+   };
+  };
+  return vowels;
+};
+
+vowelCounter(`interERz`);
 
 
 
