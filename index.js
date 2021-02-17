@@ -220,9 +220,7 @@ function game(user, computer){
           (user === `scissors` && computer === `rock`)){
     return `you lose!`
   }
-  else if( (user ===  `rock` && computer === `scissors`) ||
-          (user === `paper` && computer === `rock`) ||
-          (user === `scissors` && computer === `paper`)){
+  else{
     return `you win!`
   };
   
