@@ -191,10 +191,62 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let randoNum = Math.random();
+let compChoice = randoNum;
+
+if(compChoice <= .333333333333333){
+  compChoice = `rock`;
+}
+else if(compChoice > .333333333333333 && compChoice <= .666666666666666){
+  compChoice = `paper`;
+}
+else {
+  compChoice = `scissors`;
+};
+
+
 function game(user, computer){
     /*add your code here*/
-}
+
+    user.toLowerCase();
   
+    if(user != `rock` && user != `paper` && user != `scissors`){
+      return console.log(`OAK: This isn't the time to use that!`);
+    };
+  // else if(user === `rock`){
+  //   user = 1;
+  // }
+  // else if(user === 'paper'){
+  //   user = 2;
+  // }
+  // else{
+  //   user = 3;
+  // };
+  
+  
+  // console.log(computer)
+  
+  if(user === computer){
+    return `it's a tie`
+  }
+  else if( (user === `rock` && computer === `paper`) ||
+          (user === `paper` && computer === `scissors`) ||
+          (user === `scissors` && computer === `rock`)){
+    return `you lose!`
+  }
+  else if( (user ===  1 && computer === 3) ||
+          (user === 2 && computer === 1) ||
+          (user === 3 && computer === 2)){
+    return `you win!`
+  };
+  
+};
+
+// for(let i = 0; i<11; i++){
+  
+game(`rock`, compChoice);
+
+// };
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
