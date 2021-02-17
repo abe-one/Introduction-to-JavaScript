@@ -206,26 +206,12 @@ else {
 
 
 function game(user, computer){
-    /*add your code here*/
-
     user.toLowerCase();
+  if(user != `rock` && user != `paper` && user != `scissors`){
+    return console.log(`OAK: This isn't the time to use that!`);
+  }
   
-    if(user != `rock` && user != `paper` && user != `scissors`){
-      return console.log(`OAK: This isn't the time to use that!`);
-    };
-  // else if(user === `rock`){
-  //   user = 1;
-  // }
-  // else if(user === 'paper'){
-  //   user = 2;
-  // }
-  // else{
-  //   user = 3;
-  // };
-  
-  
-  // console.log(computer)
-  
+  else 
   if(user === computer){
     return `it's a tie`
   }
@@ -234,19 +220,16 @@ function game(user, computer){
           (user === `scissors` && computer === `rock`)){
     return `you lose!`
   }
-  else if( (user ===  1 && computer === 3) ||
-          (user === 2 && computer === 1) ||
-          (user === 3 && computer === 2)){
+  else if( (user ===  `rock` && computer === `scissors`) ||
+          (user === `paper` && computer === `rock`) ||
+          (user === `scissors` && computer === `paper`)){
     return `you win!`
   };
   
 };
 
-// for(let i = 0; i<11; i++){
-  
 game(`rock`, compChoice);
 
-// };
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -256,13 +239,13 @@ game(`rock`, compChoice);
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+    return km * 0.621371/*192237*/;
+  };
 
 
 
@@ -274,10 +257,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm){
+    return cm / 30.48;
+  };
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -290,9 +272,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(bottles){
+          return `${bottles} bottles of soda on the wall, ${bottles } bottles of soda, take one down pass it around ${bottles -1} bottles of soda on the wall`;
+        };;
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -310,9 +292,26 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(outOf100){
+  if(outOf100 > 100){
+    return `It might as well be OVER 9000!`;
   }
+  else if(outOf100 >= 90){
+    return `you got an A`;
+  }
+  else if(outOf100 >= 80){
+    return `you got a B`;
+  }
+  else if(outOf100 >= 70){
+    return `you got a C`
+  }
+  else if(outOf100 >= 60){
+    return `you got a D`
+  }
+  else{
+    return `you got an F`
+  };
+  };
   
   
 
